@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,114 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIKitElementsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="UzF-6x-NVq">
+                                <rect key="frame" x="25" y="97" width="340" height="641.33333333333337"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="m5d-tr-KSV">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="32"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                            <segment title="Third"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" red="0.65946422490000001" green="0.62465597429999997" blue="0.83586726239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="segmentedControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="VwI-lO-9v9"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sm-MK-WnU">
+                                        <rect key="frame" x="0.0" y="81" width="340" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" red="0.83586726239999998" green="0.49130905930000002" blue="0.64054204020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.29999999999999999" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xn7-pz-HHy">
+                                        <rect key="frame" x="-2" y="155" width="344" height="31"/>
+                                        <color key="tintColor" red="0.83586726237818132" green="0.49130905933871311" blue="0.64054204015651028" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="minimumTrackTintColor" red="0.83586726239999998" green="0.49130905930000002" blue="0.64054204020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="maximumTrackTintColor" red="0.65946422490000001" green="0.62465597429999997" blue="0.83586726239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="thumbTintColor" red="0.65946422490000001" green="0.62465597429999997" blue="0.83586726239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="nj3-zd-xb0"/>
+                                        </connections>
+                                    </slider>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CMc-4a-bjs">
+                                        <rect key="frame" x="0.0" y="235" width="340" height="34"/>
+                                        <color key="backgroundColor" red="0.95371175549693943" green="0.95371175549693943" blue="0.95371175549693943" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldAction:" destination="BYZ-38-t0r" eventType="editingChanged" id="8vD-vs-CFC"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDU-aj-b3c">
+                                        <rect key="frame" x="0.0" y="319" width="340" height="34.333333333333314"/>
+                                        <color key="tintColor" red="1" green="0.87093398480029904" blue="0.8941683730829374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Save">
+                                            <color key="baseBackgroundColor" red="0.83586726239999998" green="0.49130905930000002" blue="0.64054204020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="clickOnSave" destination="BYZ-38-t0r" eventType="touchUpInside" id="qMq-uW-eze"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="oaA-Yw-uJb">
+                                        <rect key="frame" x="0.0" y="403" width="340" height="157"/>
+                                        <connections>
+                                            <action selector="datePickerAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="hiS-sj-iD2"/>
+                                        </connections>
+                                    </datePicker>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0dU-Lh-iq9">
+                                        <rect key="frame" x="0.0" y="610.33333333333337" width="340" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dy6-oM-aA3">
+                                                <rect key="frame" x="0.0" y="0.0" width="286" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.83586726239999998" green="0.49130905930000002" blue="0.64054204020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aFN-Pn-BFT">
+                                                <rect key="frame" x="291" y="0.0" width="51" height="31"/>
+                                                <color key="tintColor" red="0.83586726239999998" green="0.49130905930000002" blue="0.64054204020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="onTintColor" red="0.65946422490000001" green="0.62465597429999997" blue="0.83586726239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="thumbTintColor" red="0.83586726239999998" green="0.49130905930000002" blue="0.64054204020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="switchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="EEM-AV-jyU"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.84225416922056284" green="0.80420060840910801" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UzF-6x-NVq" secondAttribute="bottom" constant="50" id="F64-Fw-TcR"/>
+                            <constraint firstAttribute="trailing" secondItem="UzF-6x-NVq" secondAttribute="trailing" constant="25" id="GhY-vD-gSZ"/>
+                            <constraint firstItem="UzF-6x-NVq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="T3R-WA-1UF"/>
+                            <constraint firstItem="UzF-6x-NVq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="a9Q-nz-YxY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonSave" destination="nDU-aj-b3c" id="mxe-nK-GYN"/>
+                        <outlet property="datePicker" destination="oaA-Yw-uJb" id="C5X-MW-qfD"/>
+                        <outlet property="hideLabel" destination="dy6-oM-aA3" id="Pvl-Eq-Fmg"/>
+                        <outlet property="hideSwitch" destination="aFN-Pn-BFT" id="kvU-FY-Wid"/>
+                        <outlet property="infoLabel" destination="5sm-MK-WnU" id="I1P-XW-LmN"/>
+                        <outlet property="segmentedControl" destination="m5d-tr-KSV" id="Ju8-yB-Y3V"/>
+                        <outlet property="slider" destination="xn7-pz-HHy" id="73W-ml-UVn"/>
+                        <outlet property="textField" destination="CMc-4a-bjs" id="aEP-mh-p9s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="76.92307692307692" y="3.5545023696682461"/>
         </scene>
     </scenes>
 </document>
